@@ -17,3 +17,67 @@ export const socialLinks = [
     icon: Instagram,
   },
 ];
+
+export const skills = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Express.js",
+  "Node.js",
+  "Redux",
+  "Zustand",
+  "Redux-Toolkit",
+  "Prisma",
+  "JavaScript",
+  "Shadcn-UI",
+  "Tailwind CSS",
+  "Next-Auth",
+  "MongoDB",
+  "HTML",
+  "CSS",
+];
+
+export const projects = [
+  {
+    name: "X (Twitter) clone",
+    description: "Replica of your favorite social media platform.",
+    github: "https://github.com/sudipb7/x-clone",
+    live: "https://x-clone-sb.vercel.app",
+    techs: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "MongoDB",
+      "Zustand",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    name: "X (Twitter) clone",
+    description: "Replica of your favorite social media platform.",
+    github: "https://github.com/sudipb7/x-clone",
+    live: "https://x-clone-sb.vercel.app",
+    techs: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "MongoDB",
+      "Zustand",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    name: "X (Twitter) clone",
+    description: "Replica of your favorite social media platform.",
+    github: "https://github.com/sudipb7/x-clone",
+    live: "https://x-clone-sb.vercel.app",
+    techs: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "MongoDB",
+      "Zustand",
+      "Tailwind CSS",
+    ],
+  },
+];

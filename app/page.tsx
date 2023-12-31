@@ -1,9 +1,19 @@
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { Projects } from "@/components/projects";
+import { Skills } from "@/components/skills";
 
 const Home = () => {
   return (
-    <main className="h-full w-full max-w-[700px] relative overflow-x-hidden mx-auto py-8 px-2">
-      <Header />
+    <main className="h-full w-full relative">
+      <div className="w-full h-full overflow-x-hidden py-4 md:py-8 px-2">
+        <Header />
+        <Hero />
+        <Skills />
+        <Projects />
+        <Footer />
+      </div>
     </main>
   );
 };
