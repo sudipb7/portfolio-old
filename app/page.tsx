@@ -7,7 +7,7 @@ import { Skills } from "@/components/skills";
 const Home = () => {
   return (
     <main className="h-full w-full relative">
-      <div className="w-full h-full overflow-x-hidden py-4 md:py-8 px-2">
+      <div className="w-full h-full overflow-x-hidden py-4 md:pt-6 px-2">
         <Header />
         <Hero />
         <Skills />
