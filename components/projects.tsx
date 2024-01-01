@@ -11,13 +11,13 @@ export const Projects = () => {
         {projects.map((project) => (
           <article
             key={project.name}
-            className="p-4 flex items-center gap-2 rounded-md tracking-wide border border-zinc-200 dark:border-[#1C1C1C] hover:bg-[#fefefe]/60 dark:hover:bg-[#1C1C1C]/40 transition-all"
+            className="p-4 flex items-center gap-2 rounded-md tracking-wide border border-[#1C1C1C] hover:bg-[#1C1C1C]/40 transition-all"
           >
             <div className="flex-1">
               <p className="text-sm md:text-[17px] font-medium">
                 {project.name}
               </p>
-              <p className="text-[10px] md:text-xs font-light text-zinc-600 dark:text-zinc-400 mt-2">
+              <p className="text-[10px] md:text-xs font-light text-zinc-400 mt-2">
                 {project.description}
               </p>
               {/* TODO: Skills */}
@@ -37,17 +37,17 @@ export const Projects = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-2.5 rounded-md border border-zinc-200 hover:bg-zinc-200 dark:border-[#1C1C1C] dark:hover:bg-[#1C1C1C] cursor-pointer transition-all"
+                className="z-10 group p-2.5 rounded-md border border-[#1C1C1C] hover:bg-[#1C1C1C] cursor-pointer transition"
               >
-                <Github className="h-4 w-4 text-zinc-500 group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-400 transition-all" />
+                <Github className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
               </Link>
               <Link
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-2.5 rounded-md border border-zinc-200 hover:bg-zinc-200 dark:border-[#1C1C1C] dark:hover:bg-[#1C1C1C] cursor-pointer transition-all"
+                className="z-10 group p-2.5 rounded-md border border-[#1C1C1C] hover:bg-[#1C1C1C] cursor-pointer transition"
               >
-                <LinkIcon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-400 transition-all" />
+                <LinkIcon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
               </Link>
             </div>
           </article>

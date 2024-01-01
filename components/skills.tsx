@@ -8,7 +8,7 @@ export const Skills = () => {
         {skills.map((skill) => (
           <span
             key={skill}
-            className="p-1.5 md:p-2.5 rounded-md border text-[10px] md:text-xs border-zinc-200 dark:border-[#1C1C1C] hover:bg-zinc-200 dark:hover:bg-[#1C1C1C] cursor-pointer text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-400 transition-all"
+            className="p-1.5 md:p-2.5 rounded-md border text-[10px] md:text-xs border-[#1C1C1C] hover:bg-[#1C1C1C] cursor-pointer text-zinc-500 hover:text-zinc-400 transition-all"
           >
             {skill}
           </span>
