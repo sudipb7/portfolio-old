@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { socialLinks } from "@/lib/constants";
+import { ModeToggle } from "./mode-toggle";
 
 export const Header = () => {
   return (
     <header className="max-w-[700px] mx-auto flex items-center justify-between p-4">
       <div className="flex items-center gap-4">
         <div className="relative overflow-hidden h-10 md:h-12 w-10 md:w-12 rounded-full">
-          <Image 
+          <Image
             src="/hero.jpg"
             fill
             alt="Profile picture"
@@ -32,13 +33,14 @@ export const Header = () => {
               href={link.route}
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-2.5 rounded-md border border-[#1C1C1C] hover:bg-[#1C1C1C] cursor-pointer transition"
+              className="group p-2.5 rounded-md border border-zinc-200 hover:bg-zinc-200 dark:border-[#1C1C1C] dark:hover:bg-[#1C1C1C] cursor-pointer transition-all"
               key={link.label}
             >
-              <Icon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
+              <Icon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-400 transition-all" />
             </Link>
           );
         })}
+        <ModeToggle />
       </div>
     </header>
   );
