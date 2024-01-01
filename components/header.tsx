@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { socialLinks } from "@/lib/constants";
 
 export const Header = () => {
   return (
-    <header className="w-full max-w-[700px] mx-auto flex items-center justify-between p-4">
+    <header className="max-w-[700px] mx-auto flex items-center justify-between p-4">
       <div className="flex items-center gap-4">
-        <div className="relative overflow-hidden h-8 md:h-10 w-8 md:w-10 rounded-full">
+        <div className="relative overflow-hidden h-10 md:h-12 w-10 md:w-12 rounded-full">
           <Image 
             src="/hero.jpg"
             fill
@@ -27,7 +28,7 @@ export const Header = () => {
         {socialLinks.map((link) => {
           const Icon = link.icon;
           return (
-            <a
+            <Link
               href={link.route}
               target="_blank"
               rel="noopener noreferrer"
@@ -35,7 +36,7 @@ export const Header = () => {
               key={link.label}
             >
               <Icon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
-            </a>
+            </Link>
           );
         })}
       </div>

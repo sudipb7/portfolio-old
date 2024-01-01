@@ -39,8 +39,8 @@ export const skills = [
 
 export const projects = [
   {
-    name: "X (Twitter) clone",
-    description: "Replica of your favorite social media platform.",
+    name: "X (Twitter) Clone",
+    description: "Replica of your favorite social media platform X (formerly known as Twitter).",
     github: "https://github.com/sudipb7/x-clone",
     live: "https://x-clone-sb.vercel.app",
     techs: [
@@ -50,6 +50,17 @@ export const projects = [
       "MongoDB",
       "Zustand",
       "Tailwind CSS",
+    ],
+  },
+  {
+    name: "Vanilla JS Notes App",
+    description: "A simple note taking app created using vanilla js.",
+    github: "https://github.com/sudipb7/notes-app",
+    live: "https://notes-app-webdevsudip.netlify.app/",
+    techs: [
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
 ];
