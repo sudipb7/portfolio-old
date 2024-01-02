@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Github, Link as LinkIcon } from "lucide-react";
 
+import { Badge } from "../badge";
+
 interface ProjectCardProps {
   title: string;
   desc: string;
@@ -17,21 +19,22 @@ export const ProjectCard = ({
   techs = [],
 }: ProjectCardProps) => {
   return (
-    <article className="p-4 flex items-start sm:items-center gap-2 rounded-md tracking-wide border border-[#1C1C1C] hover:bg-[#1C1C1C]/40 transition-all">
+    <article className="p-4 flex max-sm:flex-col items-start sm:items-center gap-2 rounded-md tracking-wide border border-[#1C1C1C] hover:bg-[#1C1C1C]/40 transition-all">
       <div className="flex-1">
-        <p className="text-sm md:text-[17px] font-medium">{title}</p>
+        <p className="text-sm md:text-[17px] font-medium">
+          {title}
+        </p>
         <p className="text-xs md:text-xs font-light text-zinc-400 mt-2">
           {desc}
         </p>
         {techs?.length !== 0 && (
-          <div className="flex flex-wrap items-center gap-1 mt-3">
-            {techs.map((tech) => (
-              <span
-                key={tech}
-                className="p-1.5 md:p-2 rounded-md border text-[10px] md:text-[11px] border-[#1C1C1C] hover:bg-[#1C1C1C] cursor-pointer text-zinc-500 hover:text-zinc-400 transition-all"
-              >
-                {tech}
-              </span>
+          <div className="flex flex-wrap items-center gap-1 mt-2.5">
+            {techs.map((tech, index) => (
+              <Badge 
+                key={index} 
+                label={tech} 
+                size="sm" 
+              />
             ))}
           </div>
         )}
