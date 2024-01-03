@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -7,7 +7,10 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Poppins({
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Sudip Biswas",
@@ -21,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, "bg-[#FBFCFD] dark:bg-[#121212]")}>
+      <body className={cn(font.className, "bg-[#FBFCFD] dark:bg-[#121212]")}>
         <Analytics />
         <SpeedInsights />
         <ThemeProvider
