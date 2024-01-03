@@ -19,12 +19,12 @@ export const ProjectCard = ({
   techs = [],
 }: ProjectCardProps) => {
   return (
-    <article className="p-4 flex items-start sm:items-center gap-2 rounded-md tracking-wide border border-[#1C1C1C] hover:bg-[#1C1C1C]/40 transition-all">
+    <article className="p-4 flex items-start sm:items-center gap-2 rounded-md tracking-wide border border-zinc-200 dark:border-[#1C1C1C] hover:bg-zinc-100 dark:hover:bg-[#1C1C1C]/40 transition-all">
       <div className="flex-1">
         <p className="text-sm md:text-[17px] font-medium">
           {title}
         </p>
-        <p className="text-xs md:text-xs font-light text-zinc-400 mt-2">
+        <p className="text-xs md:text-xs font-light text-zinc-500 dark:text-zinc-400 mt-2">
           {desc}
         </p>
       </div>
@@ -35,7 +35,7 @@ export const ProjectCard = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
+            <Github className="h-4 w-4 text-zinc-600 dark:text-zinc-500 hover:text-zinc-800 dark:group-hover:text-zinc-400" />
           </Link>
         </IconButton>
         {live && (
@@ -45,7 +45,7 @@ export const ProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkIcon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
+              <LinkIcon className="h-4 w-4 text-zinc-600 dark:text-zinc-500 group-hover:text-zinc-800 dark:group-hover:text-zinc-400" />
             </Link>
           </IconButton>
         )}
