@@ -8,9 +8,9 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="max-w-[700px] mx-auto p-4 pb-3 mt-2 md:mt-3">
+    <footer className="max-w-[700px] mx-auto p-4 pb-2 mt-2 md:mt-3">
       <div className="h-[0.5px] bg-zinc-500 dark:bg-zinc-700 rounded-md w-full" />
-      <div className="flex items-center justify-between mt-4">
+      <div className="flex flex-col-reverse sm:flex-row max-sm:gap-2.5 items-center justify-between mt-4">
         <p className="text-xs font-light tracking-wide text-zinc-600 dark:text-zinc-500">
           &copy; {currentYear} Sudip Biswas
         </p>
