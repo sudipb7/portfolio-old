@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { cn } from "@/lib/utils";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,10 +21,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(inter.className, "dark:bg-[#121212]")}>
         <Analytics />
         <SpeedInsights />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          storageKey="sudipbiswas.dev"
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
