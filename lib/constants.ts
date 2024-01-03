@@ -48,19 +48,7 @@ export const projects = [
       "TypeScript",
       "Prisma",
       "MongoDB",
-      "Zustand",
       "Tailwind CSS",
-    ],
-  },
-  {
-    title: "Vanilla JS Notes App",
-    desc: "A simple note taking app created using vanilla js.",
-    github: "https://github.com/sudipb7/notes-app",
-    live: "https://notes-app-webdevsudip.netlify.app/",
-    techs: [
-      "HTML",
-      "CSS",
-      "JavaScript",
     ],
   },
 ];

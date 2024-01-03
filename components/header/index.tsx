@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { socialLinks } from "@/lib/constants";
+import { IconButton } from "@/components/icon-button";
 
 export const Header = () => {
   return (
@@ -25,18 +26,22 @@ export const Header = () => {
         </div>
       </div>
       <div className="flex gap-2.5 items-center">
-        {socialLinks.map((link) => {
+        {socialLinks.map((link, index) => {
           const Icon = link.icon;
           return (
-            <Link
-              href={link.route}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-2.5 rounded-md border border-[#1C1C1C] hover:bg-[#1C1C1C] cursor-pointer transition"
-              key={link.label}
+            <IconButton
+              key={index}
+              label={link.label}
             >
-              <Icon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
-            </Link>
+              <Link
+                href={link.route}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={link.label}
+              >
+                <Icon className="h-4 w-4 text-zinc-500 group-hover:text-zinc-400" />
+              </Link>
+            </IconButton>
           );
         })}
       </div>
