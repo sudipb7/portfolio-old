@@ -1,20 +1,21 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { cn } from "@/lib/utils";
-import "./globals.css";
+import { ThemeProvider } from '@/components/providers/theme-provider';
+import { cn } from '@/lib/utils';
+import './globals.css';
 
 const font = Poppins({
-  weight: ["300", "400", "500", "600"],
-  subsets: ["latin"],
+  weight: ['300', '400', '500', '600'],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Sudip Biswas",
-  description: "Just another passionate, skillful, and oh-so-creative web developer here.",
+  title: 'Sudip Biswas',
+  description:
+    'Just another passionate, skillful, and oh-so-creative web developer here.',
 };
 
 export default function RootLayout({
@@ -23,15 +24,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn(font.className, "bg-[#FBFCFD] dark:bg-[#121212]")}>
+    <html lang='en' suppressHydrationWarning>
+      <body className={cn(font.className, 'bg-[#FBFCFD] dark:bg-[#121212]')}>
         <Analytics />
         <SpeedInsights />
         <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
+          attribute='class'
+          defaultTheme='dark'
           enableSystem
-          storageKey="sudipbiswas.dev"
+          storageKey='sudipbiswas.dev'
         >
           {children}
         </ThemeProvider>
