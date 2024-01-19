@@ -29,6 +29,8 @@ export const skills = [
   'Redux-Toolkit',
   'Prisma',
   'JavaScript',
+  'Tanstack-Query',
+  'Framer Motion',
   'Shadcn-UI',
   'Tailwind CSS',
   'Next-Auth',
@@ -42,7 +44,7 @@ export const projects = [
     title: 'X (Twitter) Clone',
     desc: 'Replica of your favorite social media platform X (formerly known as Twitter).',
     github: 'https://github.com/sudipb7/x-clone',
-    live: 'https://x-clone-sb.vercel.app',
+    live: 'https://x-clone.sudipbiswas.me',
     techs: ['Next.js', 'TypeScript', 'Prisma', 'MongoDB', 'Tailwind CSS'],
   },
 ];

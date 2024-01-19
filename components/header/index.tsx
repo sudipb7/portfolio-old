@@ -10,7 +10,7 @@ export const Header = () => {
       <div className='flex items-center gap-4'>
         <div className='relative overflow-hidden h-10 md:h-12 w-10 md:w-12 rounded-full'>
           <Image
-            src='/hero.jpg'
+            src='/ai-dp.png'
             fill
             alt='Profile picture'
             className='object-cover'
