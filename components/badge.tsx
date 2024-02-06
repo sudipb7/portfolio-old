@@ -8,7 +8,7 @@ interface BadgeProps {
 
 export const Badge = ({ size, label, onClick }: BadgeProps) => {
   const defaultStyles =
-    'rounded-md border border-zinc-200 dark:border-[#1C1C1C] hover:bg-zinc-200 dark:hover:bg-[#1C1C1C] text-zinc-600 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-400 transition';
+    'rounded-md border border-zinc-200 hover:bg-zinc-200 text-zinc-600 hover:text-zinc-800 transition';
 
   const styles = {
     sm: 'p-1 md:p-1.5 text-[8px] md:text-[10px]',

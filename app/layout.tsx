@@ -3,7 +3,6 @@ import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import { ThemeProvider } from '@/components/providers/theme-provider';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
@@ -83,17 +82,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={cn(font.className, 'bg-[#FBFCFD] dark:bg-[#121212]')}>
+      <body className={cn(font.className, 'bg-[#FBFCFD]')}>
         <Analytics />
         <SpeedInsights />
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          enableSystem
-          storageKey='sudipbiswas.dev'
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

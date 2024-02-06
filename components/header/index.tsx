@@ -34,7 +34,7 @@ export const Header = () => {
                 rel='noopener noreferrer'
                 key={link.label}
               >
-                <Icon className='h-4 w-4 text-zinc-600 dark:text-zinc-500 group-hover:text-zinc-800 dark:group-hover:text-zinc-400' />
+                <Icon className='h-4 w-4 text-zinc-600 group-hover:text-zinc-800' />
               </Link>
             </IconButton>
           );

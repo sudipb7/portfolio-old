@@ -12,7 +12,7 @@ export const IconButton = ({ label, children }: IconButtonProps) => {
       <Button
         variant='outline'
         size='icon'
-        className='bg-[#FBFCFD] dark:bg-[#121212] group border-zinc-300 dark:border-[#1C1C1C] hover:bg-zinc-300 dark:hover:bg-[#1C1C1C] transition'
+        className='bg-[#FBFCFD] group border-zinc-300 hover:bg-zinc-300 transition'
         asChild
       >
         {children}
