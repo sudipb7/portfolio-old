@@ -42,7 +42,7 @@ export const skills = [
 export const projects = [
   {
     title: 'AI Labs',
-    desc: 'Replica of your favorite social media platform X (formerly known as Twitter).',
+    desc: 'AI powered web app to generate text, code, etc. using Gemini Pro and Vercel AI.',
     github: 'https://github.com/sudipb7/ai-labs',
     live: 'https://ai-labs.vercel.app',
     techs: [
