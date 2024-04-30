@@ -7,6 +7,7 @@ import { siteConfig } from '@/lib/constants/site';
 import { cn } from '@/lib/utils';
 
 import './globals.css';
+import { WebPush } from '@/components/webpush';
 
 const font = Poppins({
   weight: ['300', '400', '500', '600'],
@@ -86,6 +87,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         {children}
+        <WebPush />
       </body>
     </html>
   );
