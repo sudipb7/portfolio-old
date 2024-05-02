@@ -8,7 +8,6 @@ import { siteConfig } from '@/lib/constants/site';
 import { cn } from '@/lib/utils';
 
 import './globals.css';
-import { InitializeOneSignal } from '@/components/one-signal';
 
 const font = Poppins({
   weight: ['300', '400', '500', '600'],
@@ -77,18 +76,27 @@ export const metadata: Metadata = {
   manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
-export default function RootLayout({
+async function runOneSignal() {
+  await OneSignal.init({
+    appId: '616e6c5c-7bf0-45d2-b114-67f8bbcb82a9',
+    allowLocalhostAsSecureOrigin: true,
+  });
+  OneSignal.Slidedown.promptPush();
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  await runOneSignal();
+
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={cn(font.className, 'bg-[#FBFCFD]')}>
         <Analytics />
         <SpeedInsights />
         {children}
-        <InitializeOneSignal />
       </body>
     </html>
   );
